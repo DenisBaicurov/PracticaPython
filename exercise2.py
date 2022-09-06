@@ -4,26 +4,15 @@
 class Verity:
 
     def input_boolean():
-        while True:
-            input_data = input ("Введите число:0 или 1 ")
-            if not input_data.isnumeric():
-                print("Вы ввели не число. Попробуйте снова: ")
-            elif not 0 <= int(input_data) <= 1:
-                print("Ваше число не диапазоне. Попробуйте снова")
-            else:
-                break
-            
-        
-      #  print(bool(int(input_data)))
-        return (bool(int(input_data)))
+        print("X", "Y", "Z", "Rezult" )
+        print("*"*15)
+        for X in range(2):
+            for Y in range(2):
+                for Z in range(2):
+                    rezult=not(X or Y or Z)== ((not X)and (not Y) and (not Z))
+                    print(f"{X} {Y} {Z} - {rezult}")
+    input_boolean()                
 
-    x=input_boolean()
-    y=input_boolean()
-    z=input_boolean()
-
-    print(not(x|y|z))
-    print((not x)&(not y)&(not z))
-    print((not((x|y|z)))==(not x)&(not y)&(not z))
 
           
   
